@@ -5,80 +5,383 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saint Seiya</title>
+
+    <!-- COMEÇO DO LINK CSS-->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- FIM DO LINK CSS-->
+
+    <!-- COMEÇO BOOTSTRAP MIN CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- FIM BOOTSTRAP MIN CSS-->
+
+    <!-- COMEÇO OWL CARROUSEL MIN CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FIM OWL CARROUSEL MIN CSS-->
+
+    <!-- COMEÇO OWL CARROUSEL THEME DEFAULT -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FIM OWL CARROUSEL THEME DEFAULT -->
+
+    <!-- COMEÇO JQUERY MIN JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- FIM JQUERY MIN JS -->
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
 </head>
 
 <body>
 
+    <!-- COMEÇO DA NAV -->
     <nav>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="d-flex justify-content-around">
-                        <div class="nav-logo">
+                    <div class="menu d-flex justify-content-around">
+
+                        <!-- COMEÇO DA LOGO NAV -->
+                        <div class="menu__logo">
                             <img src="assets/images/logo.png">
                         </div>
-                        <div class="nav-list">
+                        <!-- FIM DA LOGO NAV -->
+
+                        <!-- COMEÇO DO MENU HAMBURGUER NAV -->
+                        <div class="menu__toggle" onclick="toggleMenu()" id="toggleButton">
+                            <div class="menu__bar"></div>
+                        </div>
+                        <!-- FIM DO MENU HAMBURGUER NAV -->
+
+                        <!-- COMEÇO DO MENU MOBILE NAV -->
+                        <div class="mobile__menu" id="mobileMenu">
+                            <ul class="mobile__list">
+                                <li class="mobile__item"><a href="" class="mobile__link">Cavaleiros de Atena</a></li>
+                                <li class="mobile__item"><a href="" class="mobile__link">Os 88 cavaleiros</a></li>
+                                <li class="mobile__item"><a href="" class="mobile__link">Os 12 dourados</a></li>
+                                <li class="mobile__item"><a href="" class="mobile__link">As 12 casas</a></li>
+                                <li class="mobile__item"><a href="" class="mobile__link">Seja um cavaleiro!</a></li>
+                            </ul>
+                        </div>
+                        <!-- FIM DO MENU MOBILE NAV -->
+
+                        <!-- COMEÇO DA NAV DESKTOP -->
+                        <div class="menu__list">
                             <ul class="d-flex">
-                                <li class="nav-item"><a href="">Cavaleiros de Atena</a></li>
-                                <li class="nav-item"><a href="">Os 88 cavaleiros</a></li>
-                                <li class="nav-item"><a href="">Os 12 dourados</a></li>
-                                <li class="nav-item"><a href="">As 12 casas</a></li>
-                                <li class="nav-item"><a href="">Seja um cavaleiro!</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Cavaleiros de Atena</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Os 88 cavaleiros</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Os 12 dourados</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">As 12 casas</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Seja um cavaleiro!</a></li>
                             </ul>
                         </div>
                     </div>
+                    <!-- FIM DA NAV DESKTOP -->
+
                 </div>
             </div>
         </div>
     </nav>
+    <!-- FIM DA NAV -->
 
+    <!-- COMEÇO DO MAIN CARROUSEL -->
     <main>
-        <div class="container-fluid p-0 m-0">
+        <div class="container-fluid p-0 m-0" style="background-color: black;">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="slide-topo owl-carousel owl-theme">
-                        <div class="item-slide d-flex flex-column justify-content-center bg-dark">
-                            <div class="bg-slide" style="background-image: url('assets/images/destaque1.png');"></div>
-                            <div class="content-slide-png main-1030 content-slide">
-                                <div class="row content-slide-title">
-                                    <div class="col-sm-8 col-12 d-flex flex-column">
-                                        <h2 class="slide-title font-weight-bold text-truncate-5">
-                                            Conheça os Cavaleiros
-                                            de Bronze, a base do exército da deusa Atena</h2>
-                                        <a href="/" class="btn-main">Veja mais</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+                    <!-- COMEÇO DO OWL CARROUSEL -->
+                    <div class="slide owl-carousel owl-theme">
+
+                        <!-- ITEM 1 -->
+                        <div class="slide__item d-flex flex-column justify-content-center">
+
+                            <!-- COMEÇO DA IMAGEM DO CARROUSEL -->
+                            <div class="slide__bg" style="background-image: url('assets/images/destaque1.png');"></div>
+                            <!-- FIM DA IMAGEM DO CARROUSEL -->
+
+                            <!-- COMEÇO DA BOX CARROUSEL -->
+                            <div class="slide__png main-1030 content-slide">
+
+                                <!-- COMEÇO DA BOX CARROUSEL TEXT -->
+                                <div class="slide__box d-flex justify-content-center flex-column">
+                                    <h2 class="slide__title">
+                                        Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
+                                    <a href="/" class="slide__btn">Veja mais</a>
+                                </div>
+                                <!-- FIM DA BOX CARROUSEL TEXT -->
+
+                                <!-- COMEÇO DO GRADIENT BOTTOM -->
+                                <div class="slide__gradient-bottom">
+                                    <img src="assets/images/degradedestaque.png" class="gradient__bottom">
+                                </div>
+                                <!-- FIM DO GRADIENT BOTTOM -->
+
+                                <!-- COMEÇO DO GRADIENT RIGTH -->
+                                <div class="slide__gradient-right">
+                                    <img src="assets/images/degradelateral.png" class="gradient__right">
+                                </div>
+                                <!-- FIM DO GRADIENT RIGTH -->
+
+                                <!-- COMEÇO DA SETA -->
+                                <div class="slide__seta">
+                                    <img src="assets/images/setadestaque.png">
+                                </div>
+                                <!-- FIM DA SETA -->
+
+                            </div>
+                            <!-- FIM DA BOX CARROUSEL -->
+
+                        </div>
+                        <!-- FIM DO ITEM 1 -->
+
+                        <!-- ITEM 2 -->
+                        <div class="slide__item d-flex flex-column justify-content-center">
+
+                            <!-- COMEÇO DA IMAGEM DO CARROUSEL -->
+                            <div class="slide__bg" style="background-image: url('assets/images/destaque2.png');"></div>
+                            <!-- FIM DA IMAGEM DO CARROUSEL -->
+
+                            <!-- COMEÇO DA BOX CARROUSEL -->
+                            <div class="slide__png main-1030 content-slide">
+
+                                <!-- COMEÇO DA BOX CARROUSEL TEXT -->
+                                <div class="slide__box d-flex justify-content-center flex-column">
+                                    <h2 class="slide__title">
+                                        Os guerreiros da classe intermediária na ordem dos Cavaleiros de Atena</h2>
+                                    <a href="/" class="slide__btn">Veja mais</a>
+                                </div>
+                                <!-- FIM DA BOX CARROUSEL TEXT -->
+
+                                <!-- COMEÇO DO GRADIENT BOTTOM -->
+                                <div class="slide__gradient-bottom">
+                                    <img src="assets/images/degradedestaque.png" class="gradient__bottom">
+                                </div>
+                                <!-- FIM DO GRADIENT BOTTOM -->
+
+                                <!-- COMEÇO DO GRADIENT RIGHT -->
+                                <div class="slide__gradient-right">
+                                    <img src="assets/images/degradelateral.png" class="gradient__right">
+                                </div>
+                                <!-- FIM DO GRADIENT RIGTH -->
+
+                                <!-- COMEÇO DA SETA -->
+                                <div class="slide__seta">
+                                    <img src="assets/images/setadestaque.png">
+                                </div>
+                                <!-- FIM DA SETA -->
+
+                            </div>
+                            <!-- FIM DA BOX CARROUSEL -->
+
+                        </div>
+                        <!-- FIM DO ITEM 2 -->
+
+                        <!-- ITEM 3 -->
+                        <div class="slide__item d-flex flex-column justify-content-center">
+
+                            <!-- COMEÇO DA IMAGEM DO CARROUSEL -->
+                            <div class="slide__bg" style="background-image: url('assets/images/destaque3.png');"></div>
+                            <!-- FIM DA IMAGEM DO CARROUSEL -->
+
+                            <!-- COMEÇO DA BOX CARROUSEL -->
+                            <div class="slide__png main-1030 content-slide">
+
+                                <!-- COMEÇO DA BOX CARROUSEL TEXT -->
+                                <div class="slide__box d-flex justify-content-center flex-column">
+                                    <h2 class="slide__title">
+                                        Os 12 mais poderosos guerreiros entre os Cavaleiros de Atena</h2>
+                                    <a href="/" class="slide__btn">Veja mais</a>
+                                </div>
+                                <!-- FIM DA BOX CARROUSEL TEXT -->
+
+                                <!-- COMEÇO DO GRADIENT BOTTOM -->
+                                <div class="slide__gradient-bottom">
+                                    <img src="assets/images/degradedestaque.png" class="gradient__bottom">
+                                </div>
+                                <!-- COMEÇO DO GRADIENT BOTTOM -->
+
+                                <!-- COMEÇO DO GRADIENT RIGTH -->
+                                <div class="slide__gradient-right">
+                                    <img src="assets/images/degradelateral.png" class="gradient__right">
+                                </div>
+                                <!-- FIM DO GRADIENT RIGTH -->
+
+                                <!-- COMEÇO DA SETA -->
+                                <div class="slide__seta">
+                                    <img src="assets/images/setadestaque.png">
+                                </div>
+                                <!-- COMEÇO DA SETA -->
+
+                            </div>
+                            <!-- FIM DA BOX CARROUSEL -->
+
+                        </div>
+                        <!-- FIM DO ITEM 3 -->
+
+                        <!-- ITEM 4 -->
+                        <div class="slide__item d-flex flex-column justify-content-center">
+
+                            <!-- COMEÇO DA IMAGEM DO CARROUSEL -->
+                            <div class="slide__bg" style="background-image: url('assets/images/destaque4.png');"></div>
+                            <!-- FIM DA IMAGEM DO CARROUSEL -->
+
+                            <!-- COMEÇO DA BOX CARROUSEL -->
+                            <div class="slide__png main-1030 content-slide">
+
+                                <!-- COMEÇO DA BOX CARROUSEL TEXT -->
+                                <div class="slide__box d-flex justify-content-center flex-column">
+                                    <h2 class="slide__title">
+                                        Generais Marinas: os guerreiros que defendem Poseidon, Deus dos Mares</h2>
+                                    <a href="/" class="slide__btn">Veja mais</a>
+                                </div>
+                                <!-- FIM DA BOX CARROUSEL TEXT -->
+
+                                <!-- COMEÇO DO GRADIENT BOTTOM -->
+                                <div class="slide__gradient-bottom">
+                                    <img src="assets/images/degradedestaque.png" class="gradient__bottom">
+                                </div>
+                                <!-- FIM DO GRADIENT BOTTOM -->
+
+                                <!-- COMEÇO DO GRADIENT RIGTH -->
+                                <div class="slide__gradient-right">
+                                    <img src="assets/images/degradelateral.png" class="gradient__right">
+                                </div>
+                                <!-- FIM DO GRADIENT RIGTH -->
+
+                                <!-- COMEÇO DA SETA -->
+                                <div class="slide__seta">
+                                    <img src="assets/images/setadestaque.png">
+                                </div>
+                                <!-- COMEÇO DA SETA -->
+
+                            </div>
+                            <!-- FIM DA BOX CARROUSEL -->
+
+                        </div>
+                        <!-- FIM DO ITEM 4 -->
+
+                    </div>
+                    <!-- FIM DO OWL CARROUSEL -->
+
+    </main>
+    <!-- FIM DO MAIN CARROUSEL -->
+
+    <!-- COMEÇO DA SECTION INFO -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <!-- COMEÇO DA BOX INFO -->
+                    <div class="info d-flex flex-column justify-content-center align-items-center">
+
+                        <!-- COMEÇO DA INFO TITLE -->
+                        <h2 class="info__title">
+                            Cavaleiros de Atena
+                        </h2>
+                        <!-- FIM DA INFO TITLE -->
+
+                        <!-- COMEÇO DA INFO TEXT-->
+                        <p class="info__text" id="info">
+                            Os Cavaleiros de Atena (アテナの聖闘士セイント do japonês, "Santos de Atena"?) são o exército de Atena,
+                            a deusa da sabedoria, que protegem a paz na Terra e que, até a Guerra Galática, eram
+                            desconhecidos pelos humanos e eram só lendas da mitologia grega pra eles. Eles estão por
+                            trás de todas as vitórias inexplicáveis em guerras travadas entre humanos durante a
+                            história.
+                            <br><br> Vindo dos quatro cantos do mundo, eles são dotados de força e coragem. Fiéis a
+                            Atena, que odeia armas, seus corpos são a única arma que dispõem para lutar (há exceções).
+                            Eles são capazes de romper o céu com as mãos e abrir fendas na terra com seus chutes. Sempre
+                            que as forças do mal se manifestam, os Cavaleiros de Atena aparecem para combate-las.
+                            <br><br>Eles treinam seus corpos além do limite humano, até que os punhos sejam capazes de
+                            cortar o ar e partir a terra, e se protegem com Armaduras sagradas. O seu Cosmo elevado
+                            produz um
+                            destrutivo soco que rompe a barreira do som, chegando a esmigalhar blocos de concreto. São
+                            seres milagrosos que conhecem as mais diversas técnicas de luta, que fogem à imaginação
+                            humana. Todos os seus atos são supervisionados e comandados pelo Santuário da Grécia, que
+                            não se submete a nenhuma organização. O objetivo e a missão desses Cavaleiros é um só desde
+                            a época dos deuses: proteger a deusa Atena e garantir a paz na Terra.
+                            <br><br> Os escolhidos são
+                            treinados em sigilo sob a tutela de um mestre indicado pelo Santuário (que ensinam tudo
+                            sobre luta à eles) e, quando comprovada sua qualificação, recebem uma das Armaduras. A cada
+                            Cavaleiro é designada uma Armadura, conforme o destino de sua estrela. Ou seja, não lhe
+                            basta adquirir a força de um Cavaleiro: é necessário que a mereça. Habilidade,
+                            personalidade, destino e outras condições misturam-se e apenas aqueles que possuem a
+                            combinação ideal têm o direito de se tornar Cavaleiros. A probabilidade de nascimento de um
+                            Cavaleiro é quase tão remota quanto cálculos astronômicos.
+                        </p>
+                        <!-- FIM DA INFO TEXT -->
+
+                    </div>
+                    <!-- FIM DA BOX BOX INFO -->
+
+                </div>
             </div>
         </div>
+    </section>
+    <!-- FIM DA SECTION INFO -->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <div id="accordion">
+                        <h3>Lista dos Cavaleiros de Ouro:</h3>
+                        <div>
+                            <p>Mu de Áries • Aldebaran de Touro • Máscara da Morte de Câncer • Aiolia de Leão • Shaka de
+                                Virgem • Dohko de Libra (Mestre Ancião) • Milo de Escorpião • Aiolos de Sagitário
+                                (falecido) • Shura de Capricórnio • Camus de Aquário • Afrodite de Peixes</p>
+                        </div>
+                        <h3>Lista dos Cavaleiros de Prata:</h3>
+                        <div>
+                            <p>Aeson de Taça (desertou para servir a deusa Éris) • Algethi de Hércules • Algol de Perseu
+                                • Asterion de Cães de Caça • Babel de Centauro • Capella de Cocheiro • Daidalos de Cefeu
+                                • Dante de Cérbero • Dio de Mosca • Georg de Cruzeiro do Sul • Jamian de Corvo • Jorge
+                                de Fornalha (Guardião da Ilha da Rainha da Morte, mais conhecido como Guilty) • Juan de
+                                Escudo • Lodi'N de Escultor (criador da máscara de Jorge de Fornalha e de Shina de
+                                Ofiúco) • Marin de Águia • Mayura de Pavão • Misty de Lagarto • Moses de Baleia • Nicol
+                                de Altar • Noesis de Triângulo (falecido) • Orphée de Lira • Ptolemy de Flecha • Rigel
+                                de Órion (desertou para servir a deusa Éris) • Shaina de Ofiúco • Sirius de Cão Maior
+                            </p>
+                        </div>
+                        <h3>Lista dos Cavaleiros de Bronze:</h3>
+                        <div>
+                            <p>Ban de Leão Menor • Erda de Cassiopéia • Geki de Urso • Hyoga de Cisne • Ichi de Hidra •
+                                Ikki de Fênix • Jabu de Unicórnio • June de Camaleão • Katya de Coroa Boreal • Mii de
+                                Golfinho • Mirai de Cão Menor • Nachi de Lobo • Retsu de Lince • Seiya de Pégaso •
+                                Shinato de Ave do Paraíso •Shiryu de Dragão • Shoko de Cavalo Menor • Shun de Andrômeda
+                                • Xiaoling de Ursa Menor • Yuri de Sextante </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- COMEÇO DO LINK JS -->
     <script src="assets/js/main.js"></script>
+    <!-- FIM DO LINK JS -->
+
+
+    <!-- COMEÇO OWL CARROUSEL MIN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- FIM OWL CARROUSEL MIN JS -->
+
+
+
 </body>
 
 </html>
-
-
-<section 100>
-    <div class="image" 100></div>
-    <div class="texto" 100></div>
-</section>
