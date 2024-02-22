@@ -218,6 +218,7 @@ p#info {
     color: white;
     font-size: 1.125rem;
     line-height: 1.375rem;
+    margin-bottom: 5rem;
 }
 
 /* section info */
@@ -285,6 +286,53 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
     border-radius: 10px 10px 0px 0px !important;
+}
+
+.carousel__title{
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--yellow);
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+
+
+h3.carousel__name{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    padding-left: 1.85rem;
+    text-align: center;
+    font-size: 21px;
+    width: 158px;
+    line-height: 25px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.carousel__gradient {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.carousel__gradient-right {
+    position: absolute;
+    z-index: 2;
+    right: 23%;
+    padding-top: 12px;
+}
+
+@media screen and (max-width: 2400px){
+    .carousel__gradient-right {
+        right: 21%;
+    }
 }
 
 @media screen and (max-width: 1800px) {
