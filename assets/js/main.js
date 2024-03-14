@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    var owl = $('.owl-carousel');
+    var owl = $('.slide');
     owl.owlCarousel({
         loop: false,
-        margin: 10,
+        margin: 100,
         nav: false,
         autoWidth: true,
         items: 1,
@@ -68,4 +68,17 @@ $('.carousel').owlCarousel({
             items:6
         }
     }
+});
+
+
+$(document).ready(function(){
+    $('.gallery__fancybox-carousel').owlCarousel({
+        loop:true,
+        margin:400,
+        nav:true,
+        autoWidth: true,
+        items: 1,
+        center: true,
+        dots: true,
+    });
 });

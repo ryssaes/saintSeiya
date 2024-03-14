@@ -162,7 +162,7 @@ a.slide__btn {
 
 /* carrousel dots */
 
-.owl-dots {
+.slide .owl-dots {
     position: absolute !important;
     bottom: 0 !important;
     top: 0 !important;
@@ -174,14 +174,14 @@ a.slide__btn {
     margin-top: 22.125rem !important;
 }
 
-.owl-dots span {
+.slide .owl-dots span {
     background-color: #212529 !important;
     border: 1px solid var(--yellow);
     width: 1.875rem !important;
     height: 1.875rem !important;
 }
 
-.owl-dot span {
+.slide .owl-dot span {
     position: absolute;
     transform: translate(-50%, -50%);
     color: var(--yellow);
@@ -190,8 +190,8 @@ a.slide__btn {
     font-size: 1rem;
 }
 
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
+.slide .owl-theme .owl-dots .owl-dot.active span,
+.slide .owl-theme .owl-dots .owl-dot:hover span {
     color: black !important;
     font-weight: 700;
     background-color: var(--yellow) !important;
@@ -326,7 +326,78 @@ h3.carousel__name{
     position: absolute;
     z-index: 2;
     right: 23%;
-    padding-top: 12px;
+}
+
+.carousel__gradient-right img{
+    height: 390px;
+}
+
+
+.gallery__title{
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    margin-top: 96px;
+    margin-bottom: 24px;
+}
+
+.gallery .item img {
+    max-width: 830px !important;
+    height: 460px !important;
+    border-radius: 10px !important;
+}
+
+h3.gallery__text {
+    max-width: 820px;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+}
+
+h3.gallery__text span{
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+.gallery button.owl-prev{
+    background: white !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    color: white !important;
+    position: absolute !important;
+    top: 14rem !important;
+    left: 20% !important;
+    background-image: url('../images/setaesq.png') !important;
+    background-position: center !important;
+    background-size: 18px 18px !important;
+    background-repeat: no-repeat !important;
+}
+
+.gallery button.owl-prev span{
+    display: none;
+}
+
+.gallery button.owl-next {
+    background: white !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    color: white !important;
+    position: absolute !important;
+    top: 14rem !important;
+    right: 20% !important;
+    background-image: url('../images/setadir.png') !important;
+    background-position: center !important;
+    background-size: 18px 18px !important;
+    background-repeat: no-repeat !important;
+}
+
+.gallery button.owl-next span{
+    display: none;
 }
 
 @media screen and (max-width: 2400px){
@@ -335,13 +406,29 @@ h3.carousel__name{
     }
 }
 
+@media screen and (max-width: 2230px){
+    .carousel__gradient-right {
+        right: 18%;
+    }
+}
+
+@media screen and (max-width: 2025px){
+    .carousel__gradient-right {
+        right: 14%;
+    }
+}
+
 @media screen and (max-width: 1800px) {
     .slide__box {
         padding-left: 16.625rem;
     }
 
-    .owl-dots {
+    .slide .owl-dots {
         margin-right: 21.25rem !important;
+    }
+
+    .carousel__gradient-right {
+        right: 11.%;
     }
 }
 
@@ -350,7 +437,7 @@ h3.carousel__name{
         padding-left: 12.625rem;
     }
 
-    .owl-dots {
+    .slide .owl-dots {
         margin-right: 16.25rem !important;
     }
 
@@ -370,7 +457,7 @@ h3.carousel__name{
         padding-left: 7.625rem;
     }
 
-    .owl-dots {
+    .slide .owl-dots {
         margin-right: 11.25rem !important;
     }
 
@@ -396,7 +483,7 @@ h3.carousel__name{
         padding-left: 4.625rem;
     }
 
-    .owl-dots {
+   .slide .owl-dots {
         margin-right: 7.25rem !important;
     }
 
@@ -412,7 +499,7 @@ h3.carousel__name{
 }
 
 @media screen and (max-width: 1200px) {
-    .owl-dots {
+    .slide .owl-dots {
         position: absolute !important;
         bottom: 450px !important;
         top: 0px !important;
