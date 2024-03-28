@@ -288,7 +288,7 @@ a.ui-button:active,
     border-radius: 10px 10px 0px 0px !important;
 }
 
-.carousel__title{
+.carousel__title {
     margin-top: 5rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -300,7 +300,7 @@ a.ui-button:active,
 
 
 
-h3.carousel__name{
+h3.carousel__name {
     position: absolute;
     color: white;
     bottom: 0;
@@ -328,12 +328,12 @@ h3.carousel__name{
     right: 23%;
 }
 
-.carousel__gradient-right img{
+.carousel__gradient-right img {
     height: 390px;
 }
 
 
-.gallery__title{
+.gallery__title {
     color: var(--yellow);
     font-weight: 700;
     font-size: 36px;
@@ -357,12 +357,12 @@ h3.gallery__text {
     padding: 10px;
 }
 
-h3.gallery__text span{
+h3.gallery__text span {
     color: var(--yellow);
     font-weight: 600;
 }
 
-.gallery button.owl-prev{
+.gallery button.owl-prev {
     background: white !important;
     width: 30px;
     height: 30px;
@@ -377,7 +377,7 @@ h3.gallery__text span{
     background-repeat: no-repeat !important;
 }
 
-.gallery button.owl-prev span{
+.gallery button.owl-prev span {
     display: none;
 }
 
@@ -396,23 +396,125 @@ h3.gallery__text span{
     background-repeat: no-repeat !important;
 }
 
-.gallery button.owl-next span{
+.gallery button.owl-next span {
     display: none;
 }
 
-@media screen and (max-width: 2400px){
+.loginForm__title {
+    text-align: center;
+    color: var(--yellow);
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.loginForm__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.loginForm__inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm__inputs label {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 16px;
+}
+
+.loginForm__inputName,
+.loginForm__inputEmail {
+    width: 400px;
+    height: 40px;
+    border: none;
+    background-color: var(--navBg);
+    border-radius: 8px;
+}
+
+.loginForm__inputAge,
+.loginForm__inputHight,
+.loginForm__inputweight,
+.loginForm__inputDate,
+.loginForm__inputBlood {
+    width: 190px;
+    height: 40px;
+    border: none;
+    background-color: var(--navBg);
+    border-radius: 8px;
+}
+
+
+
+.loginForm__inputLocal,
+.loginForm__inputTrainer{
+    width: 295px;
+    height: 40px;
+    border: none;
+    background-color: var(--navBg);
+    border-radius: 8px;
+}
+
+.loginForm__submit{
+    width: 129px;
+    height: 40px;
+    background-color: var(--yellow);
+    color: var(--sectionBg);
+    border: none;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding: 10px 16px;
+    border-radius: 36px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    margin-bottom: 110px;
+}
+
+.footer{
+    background-color: var(--navBg);
+    height: 283px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer__list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer__item{
+    color: var(--yellow);
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 2400px) {
     .carousel__gradient-right {
         right: 21%;
     }
 }
 
-@media screen and (max-width: 2230px){
+@media screen and (max-width: 2230px) {
     .carousel__gradient-right {
         right: 18%;
     }
 }
 
-@media screen and (max-width: 2025px){
+@media screen and (max-width: 2025px) {
     .carousel__gradient-right {
         right: 14%;
     }
@@ -483,7 +585,7 @@ h3.gallery__text span{
         padding-left: 4.625rem;
     }
 
-   .slide .owl-dots {
+    .slide .owl-dots {
         margin-right: 7.25rem !important;
     }
 
